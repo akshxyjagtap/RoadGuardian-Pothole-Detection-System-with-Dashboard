@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pothole Detection System</title>
+
+    <style>
+        body {
+            background-image: url('gradient11.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 100px;
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px;
+            color: #ecf0f1;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            width: 100%;
+        }
+
+        #navbar {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.335);
+            position: absolute;
+            width: 100%;
+            top: 5px;
+            padding: 7px 0px;
+            box-shadow: #feffff;
+            border-radius: 70px;
+            overflow: hidden;
+        }
+
+        #navbar ul {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #navbar li {
+            list-style: none;
+            float: left;
+            margin: 15px;
+        }
+
+        #navbar li a {
+            display: block;
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+
+        #navbar li a:hover,
+        #navbar li a:active {
+            text-decoration: underline;
+            color: rgb(215, 81, 14);
+        }
+
+        #right {
+            position: absolute;
+            right: 30px;
+            top: 40px;
+        }
+
+        #right input {
+            border-radius: 30px;
+            width: 100px;
+            padding: 15px;
+        }
+
+        #text-container {
+            top: 70px;
+            padding: 20px;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        #image-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1, h2 {
+            color: #3498db;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #dashboard-button {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        #dashboard-button:hover {
+            background-color: #27ae60;
+        }
+
+        #photo-container {
+            position: fixed;
+            bottom: 30px;
+            right: 100px;
+            width: 70px;
+            background: transparent;
+        }
+
+        #photo-container a {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Details</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+    <div id="right">
+        <div><strong>Search</strong><input type="text" placeholder="Search" name="title"></div>
+    </div>
+
+    <main>
+        <div id="text-container">
+            <section>
+                <h2>Addressing Road Safety Challenges</h2>
+                <p>
+                    Potholes on road surfaces pose an enduring challenge to road safety and infrastructure maintenance. This project introduces an innovative approach to address this issue by integrating geospatial data, machine learning, and cloud computing.
+                    The proposed system aims to automatically detect and assess potholes in real-time, providing timely alerts to relevant stakeholders for efficient repair and maintenance.
+                </p>
+            </section>
+
+            <section>
+                <h2>Precision with Geospatial Integration</h2>
+                <p>
+                    Geospatial information, including GPS coordinates, is incorporated to precisely locate detected potholes. This spatial context aids in prioritizing maintenance efforts and optimizing repair resources. The aim is to predict continuous concrete strength monitoring, preventing unforeseen construction issues by offering early warnings.
+                </p>
+            </section>
+
+            <section>
+                <h2>User-Friendly Interface</h2>
+                <p>
+                    A user-friendly interface, accessible through web-based dashboards or mobile applications, is developed. This interface offers real-time monitoring of pothole detection, enables efficient reporting, and allows users to track repair progress.
+                </p>
+            </section>
+        </div>
+
+        <a href="dashboard.html" id="dashboard-button">Go to Pothole Detection Dashboard</a>
+    </main>
+    <div id="photo-container">
+        <a href="https://api.whatsapp.com/send?phone=15551234567">
+            <img src="whatsapp.png" alt="Contact via WhatsApp">
+        </a>
+    </div>
+</body>
+</html>
