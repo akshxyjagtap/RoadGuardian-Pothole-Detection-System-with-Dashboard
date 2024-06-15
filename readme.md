@@ -2,7 +2,7 @@
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
-**Dashboard**: [Pothole Detection Dashboard]([https://akshxyjagtap.github.io/pothole-website/](https://akshxyjagtap.github.io/RoadGuardian-Pothole-Detection-System-with-Dashboard/))
+**Dashboard**: [Pothole Detection Dashboard](https://akshxyjagtap.github.io/RoadGuardian-Pothole-Detection-System-with-Dashboard/)
 
 An intelligent Pothole Detection system using YOLOv4 Tiny, capable of identifying and categorizing potholes in real-time video streams. The severity level of each pothole (Low, Medium, High) is assessed based on its area in the frame. This system provides a valuable tool for monitoring road conditions and prioritizing maintenance efforts. The repository includes Python code, YOLO model files, and sample data for easy implementation and testing.
 
