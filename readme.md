@@ -44,7 +44,6 @@ The [test.mp4](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YO
 
 ## Files and Directory Structure
 
-- `pothole_detection.py`: Main Python script for pothole detection.
 - `main_ras.py`: Script for running the detection system on Raspberry Pi.
 - `laptopgpstest.py`: Script for running the detection system on Windows desktop.
 - `obj.names`: Text file containing label names for the YOLOv4 Tiny model.
