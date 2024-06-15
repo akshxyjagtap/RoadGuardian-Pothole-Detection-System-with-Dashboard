@@ -1,8 +1,11 @@
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 # Pothole Detection System using YOLOv4 Tiny
-Dashboard : https://akshxyjagtap.github.io/pothole-website/
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
+**Dashboard**: [Pothole Detection Dashboard](https://akshxyjagtap.github.io/pothole-website/)
 
 An intelligent Pothole Detection system using YOLOv4 Tiny, capable of identifying and categorizing potholes in real-time video streams. The severity level of each pothole (Low, Medium, High) is assessed based on its area in the frame. This system provides a valuable tool for monitoring road conditions and prioritizing maintenance efforts. The repository includes Python code, YOLO model files, and sample data for easy implementation and testing.
+
 ## Overview
 
 The pothole detection system is designed to:
@@ -18,7 +21,7 @@ The pothole detection system is designed to:
 - Python
 - OpenCV (cv2)
 - Geocoder
-- Ensure the necessary YOLOv4 Tiny model weights (`yolov4_tiny.weights`) and label names (`obj.names`) are available.)
+- Ensure the necessary YOLOv4 Tiny model weights (`yolov4_tiny.weights`) and label names (`obj.names`) are available.
 
 ## Usage
 
@@ -28,18 +31,14 @@ The pothole detection system is designed to:
 4. Run the Python script `pothole_detection.py`.
 5. Press 'q' to stop the video stream and terminate the detection process.
 
-### `test.mp4`
+### Example Video File
 
-This [video file](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YOLO-Tiny-v4/blob/6b62af71427b198d772750a8daf432ebde423bb5/test.mp4) contains footage of roads with potholes, used for testing the pothole detection system.
+The [test.mp4](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YOLO-Tiny-v4/blob/6b62af71427b198d772750a8daf432ebde423bb5/test.mp4) contains footage of roads with potholes, used for testing the pothole detection system.
 
+### Output Files
 
-
-### `result.avi` and `pothole_coordinate/`
-
-These are the output files:
-
-- [video file](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YOLO-Tiny-v4/blob/6b62af71427b198d772750a8daf432ebde423bb5/result.avi) contains the resulting video with detected potholes highlighted.
-- `pothole_coordinate/` is a folder that saves the location coordinates of detected potholes.
+- [result.avi](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YOLO-Tiny-v4/blob/6b62af71427b198d772750a8daf432ebde423bb5/result.avi): Contains the resulting video with detected potholes highlighted.
+- `pothole_coordinate/`: A folder that saves the location coordinates of detected potholes.
 
 ## Files and Directory Structure
 
@@ -54,16 +53,52 @@ These are the output files:
 - Adjust confidence and NMS thresholds for detection accuracy (`Conf_threshold`, `NMS_threshold`).
 - Modify the output directory (`result_path`) for saving detected pothole images and coordinates.
 
-
-
-
 ## Notes
 
 - Ensure CUDA and GPU support for faster processing if using GPU-enabled OpenCV.
 - Fine-tune detection parameters for better accuracy based on specific scenarios and video quality.
 
-## Contribution
+## Web Interface
 
-Contributions to optimize, improve accuracy, or add new functionalities are welcome. Feel free to open issues or pull requests.
+### Features
 
+- **Pothole Mapping**: Displays pothole locations on a map using Leaflet.js.
+- **City Search**: Allows users to search for a city and pan the map to that location.
+- **Pothole Analysis**: Generates an analysis report including the average distance between potholes.
 
+### Usage
+
+1. **Home Page**: The home page provides information about the project and a link to the dashboard.
+2. **Dashboard**: The dashboard displays the map with pothole locations and includes a search bar for city search and an analysis report section.
+
+### File Structure
+
+- `index.html`: The home page of the application.
+- `dashboard.html`: The main dashboard displaying the map and analysis report.
+- `citySearch.js`: JavaScript file for handling city search functionality.
+- `potholeData.js`: JavaScript file for fetching and displaying pothole data on the map.
+- `pothole_data.json`: JSON file containing pothole data.
+- `cities.json`: JSON file containing city data for the search functionality.
+- `styles.css`: CSS file for styling the pages (if applicable).
+
+### JSON Data Format
+
+#### `pothole_data.json`
+
+```json
+[
+    {
+        "image_path": "pothole_coordinates/pot94.jpg",
+        "latitude": 19.076,
+        "longitude": 72.8777,
+        "severity": "Low",
+        "datetime_utc": "2024-05-29 11:18:38.968232"
+    },
+    {
+        "image_path": "pothole_coordinates/pot95.jpg",
+        "latitude": 19.076,
+        "longitude": 72.8777,
+        "severity": "Low",
+        "datetime_utc": "2024-05-29 11:18:38.987330"
+    }
+]
