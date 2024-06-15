@@ -33,17 +33,9 @@ The pothole detection system is designed to:
    - `laptopgpstest.py` for running on Windows desktop.
 5. Press 'q' to stop the video stream and terminate the detection process.
 
-### Example Video File
-
-The [test.mp4](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YOLO-Tiny-v4/blob/6b62af71427b198d772750a8daf432ebde423bb5/test.mp4) contains footage of roads with potholes, used for testing the pothole detection system.
-
-### Output Files
-
-- [result.avi](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YOLO-Tiny-v4/blob/6b62af71427b198d772750a8daf432ebde423bb5/result.avi): Contains the resulting video with detected potholes highlighted.
-- `pothole_coordinate/`: A folder that saves the location coordinates of detected potholes.
-
 ## Files and Directory Structure
 
+- `pothole_detection.py`: Main Python script for pothole detection.
 - `main_ras.py`: Script for running the detection system on Raspberry Pi.
 - `laptopgpstest.py`: Script for running the detection system on Windows desktop.
 - `obj.names`: Text file containing label names for the YOLOv4 Tiny model.
@@ -51,15 +43,6 @@ The [test.mp4](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YO
 - `yolov4_tiny.cfg`: YOLOv4 Tiny configuration file.
 - `result.mp4`: Output video file with detected potholes.
 
-## Parameters and Customization
-
-- Adjust confidence and NMS thresholds for detection accuracy (`Conf_threshold`, `NMS_threshold`).
-- Modify the output directory (`result_path`) for saving detected pothole images and coordinates.
-
-## Notes
-
-- Ensure CUDA and GPU support for faster processing if using GPU-enabled OpenCV.
-- Fine-tune detection parameters for better accuracy based on specific scenarios and video quality.
 
 ## Web Interface
 
@@ -68,6 +51,14 @@ The [test.mp4](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YO
 - **Pothole Mapping**: Displays pothole locations on a map using Leaflet.js.
 - **City Search**: Allows users to search for a city and pan the map to that location.
 - **Pothole Analysis**: Generates an analysis report including the average distance between potholes.
+
+### Dashboard Features
+
+- **Interactive Map**: Visualize the locations of detected potholes on an interactive map.
+- **Search Functionality**: Users can search for a specific city to zoom in on the map.
+- **Pothole Analysis Report**: Provides an analysis report on the dashboard, including the number of potholes detected and the average distance between them.
+- **Severity Levels**: Displays the severity levels (Low, Medium, High) of detected potholes.
+- **Real-time Updates**: Automatically updates the map and report as new pothole data is processed.
 
 ### Usage
 
@@ -105,3 +96,14 @@ The [test.mp4](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YO
         "datetime_utc": "2024-05-29 11:18:38.987330"
     }
 ]
+```
+## Parameters and Customization
+
+- Adjust confidence and NMS thresholds for detection accuracy (`Conf_threshold`, `NMS_threshold`).
+- Modify the output directory (`result_path`) for saving detected pothole images and coordinates.
+
+## Notes
+
+- Ensure CUDA and GPU support for faster processing if using GPU-enabled OpenCV.
+- Fine-tune detection parameters for better accuracy based on specific scenarios and video quality.
+
