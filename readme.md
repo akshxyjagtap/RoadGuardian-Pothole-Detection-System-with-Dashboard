@@ -1,4 +1,4 @@
-# RoadGuardian : Pothole Detection System using YOLOv4 Tiny
+# RoadGuardian: Pothole Detection System using YOLOv4 Tiny
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
@@ -28,7 +28,9 @@ The pothole detection system is designed to:
 1. Ensure that the necessary libraries are installed.
 2. Configure the paths to the YOLOv4 Tiny weights, configurations, and label names (`obj.names`) in the Python script.
 3. Set the input video source (file path or camera) in the script.
-4. Run the Python script `pothole_detection.py`.
+4. Run the appropriate Python script:
+   - `main_ras.py` for running on Raspberry Pi.
+   - `laptopgpstest.py` for running on Windows desktop.
 5. Press 'q' to stop the video stream and terminate the detection process.
 
 ### Example Video File
@@ -43,6 +45,8 @@ The [test.mp4](https://github.com/akshxyjagtap/Pothole-Detection-System-using-YO
 ## Files and Directory Structure
 
 - `pothole_detection.py`: Main Python script for pothole detection.
+- `main_ras.py`: Script for running the detection system on Raspberry Pi.
+- `laptopgpstest.py`: Script for running the detection system on Windows desktop.
 - `obj.names`: Text file containing label names for the YOLOv4 Tiny model.
 - `yolov4_tiny.weights`: YOLOv4 Tiny pre-trained weights file.
 - `yolov4_tiny.cfg`: YOLOv4 Tiny configuration file.
