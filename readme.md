@@ -30,18 +30,8 @@ The pothole detection system is designed to:
 3. Set the input video source (file path or camera) in the script.
 4. Run the appropriate Python script:
    - `main_ras.py` for running on Raspberry Pi.
-   - `laptopgpstest.py` for running on Windows desktop.
+   - `Main_using_laptop_gps.py` for running on Windows desktop.
 5. Press 'q' to stop the video stream and terminate the detection process.
-
-## Files and Directory Structure
-
-- `pothole_detection.py`: Main Python script for pothole detection.
-- `main_ras.py`: Script for running the detection system on Raspberry Pi.
-- `laptopgpstest.py`: Script for running the detection system on Windows desktop.
-- `obj.names`: Text file containing label names for the YOLOv4 Tiny model.
-- `yolov4_tiny.weights`: YOLOv4 Tiny pre-trained weights file.
-- `yolov4_tiny.cfg`: YOLOv4 Tiny configuration file.
-- `result.mp4`: Output video file with detected potholes.
 
 
 ## Web Interface
